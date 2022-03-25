@@ -1,42 +1,53 @@
+const startOverText = 'Start Over';
 $(document).ready(function () {
-  $("#suggester").submit(function (event) {
+  $("#suggesterForm").submit(function (event) {
     event.preventDefault();
-    const startOverText = 'Start Over';
+    
 
     if ($("#btnSubmit").html() == startOverText) {
       resetForm();
       return;
     }
 
-    $("#suggester").validate();
+    $("#suggesterForm").validate();
 
     const name = $("#name").val();
     const age = parseInt($("#age").val());
     const occupation = parseInt($("#occupation").val());
     const experience = parseInt($("#experience").val());
-    const finance = $("input:radio[name=finance]:checked").val();
+    let answer = $("input:radio[name=answer]:checked").val();
+    let kids_ans = (age >= 5 && age < 13)
 
-    if (experience > 10 && occupation === 4) {
-      showResult(name, 'Brainfuck');
-    } else if (age >= 5 && age < 10 && occupation === 0) {
-      showResult(name, 'Codding for Kids');
-    } else if (occupation === 3 || occupation === 2 || occupation === 6) {
-      showResult(name, 'C#');
-    } else if (finance === 'yes' && experience === 0 && age > 21) {
-      showResult(name, 'Python');
-    } else {
-      showResult(name, 'Epicodus');
+    if (answer === "no") {
+      showResult(name, 'Biology');
     }
 
-    $("#btnSubmit").html(startOverText);
+    if (answer === "yes" && kids_ans) {
+      showResult(name, 'Codding for Kids');
+    } else if (age >= 13 && age <21) {
+      showResult(name, 'Python');
+    } else if (experience > 10 && occupation === 4) {
+      showResult(name, 'Brainfuck');
+    } else if (occupation >= 1 && age >= 18) {
+      showResult(name, 'C#');
+    } else if (age >= 18 && occupation === 0) {
+      showResult(name, 'HTML and CSS');
+    } else {
+      showResult(name, 'Biology');
+    }
 
   });
 });
 
 function showResult(name, language) {
+  if ($("#btnSubmit").html() == startOverText) {
+    return;
+  }
+
   $("#spanResName").text(name);
   $("#spanResLang").text(language);
   $('#divResult').show();
+  $("#btnSubmit").html(startOverText);
 }
 
 function resetForm() {

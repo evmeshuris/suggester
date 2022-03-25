@@ -6,6 +6,9 @@ h1 {
   color:#500215;
   text-align: center;
 }
+#divResult {
+  display: none;
+}
 button {
   background-color: rgb(38, 28, 168);
   color: lightblue;
@@ -16,18 +19,11 @@ button {
   cursor: pointer;
   border-radius: 4px;
 }
-#divResult {
-  display: none;
-}
 #name, #age, #occupation, #experience, #finance {
   background-color: rgb(255, 255, 226);
 }
-
-form .error {
+form. error {
   color: #ff0000;
-}
-#spanResName, #spanResLang {
-  color:rgb(246, 255, 196);
 }
 form {
   padding: 20px;
@@ -35,4 +31,7 @@ form {
   color: #fff;
   border-radius: 4px;
   width: 50%;
+}
+#spanResName, #spanResLang {
+  color:rgb(246, 255, 196);
 }
