@@ -22,10 +22,8 @@ $(document).ready(function () {
       showResult(name, 'Codding for Kids');
     } else if (occupation === 3 || occupation === 2 || occupation === 6) {
       showResult(name, 'C#');
-    } else if (finance === 'yes' && experience === 0) {
+    } else if (finance === 'yes' && experience === 0 && age > 21) {
       showResult(name, 'Python');
-    } else if (experience === 0 && age > 21) {
-      showResult(name, 'Epicodus');
     } else {
       showResult(name, 'Epicodus');
     }
