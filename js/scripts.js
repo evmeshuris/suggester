@@ -18,7 +18,7 @@ $(document).ready(function () {
 
     if (experience > 10 && occupation === 4) {
       showResult(name, 'Brainfuck');
-    } else if (age > 5 && age < 10 && occupation === 0) {
+    } else if (age >= 5 && age < 10 && occupation === 0) {
       showResult(name, 'Codding for Kids');
     } else if (occupation === 3 || occupation === 2 || occupation === 6) {
       showResult(name, 'C#');

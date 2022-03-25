@@ -1,17 +1,25 @@
 body {
   margin: 1cm;
-  background: url(file://decktop/suggester/img/pic.jpeg);
+  background-color: aliceblue;
 }
-.occupation {
-  background-color: rgb(255, 255, 226);
+h1 {
+  color:#500215;
+  text-align: center;
 }
 button {
-  margin: 10px;
+  background-color: rgb(38, 28, 168);
+  color: lightblue;
+  border: 0;
+  margin-bottom: 3px;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 4px;
 }
 #divResult {
   display: none;
 }
-#name, #age, #ocupation, #experience, #finance {
+#name, #age, #occupation, #experience, #finance {
   background-color: rgb(255, 255, 226);
 }
 
@@ -19,5 +27,12 @@ form .error {
   color: #ff0000;
 }
 #spanResName, #spanResLang {
-  color:blue;
+  color:rgb(246, 255, 196);
+}
+form {
+  padding: 20px;
+  background: #3d668f;
+  color: #fff;
+  border-radius: 4px;
+  width: 50%;
 }

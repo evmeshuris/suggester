@@ -8,8 +8,6 @@
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/scripts.js"></script>
   <title>Programming Language Suggester</title>
-  <!-- <h1><em>Programming Language Suggester</em></h1> -->
-
 <body>
   <div class="container">
     <form class="cmxform" id="suggester">
@@ -21,11 +19,11 @@
         </div>
         <div class="formSuggester">
           <label for="age">Enter Your age</label>
-          <input id="age" class="form-control" max="90" type="number" required>
+          <input id="age" class="form-control" min="5" max="90" type="number" required>
         </div>
         <div class="formSuggester">
           <label for="occupation">Enter Your ocupation</label>
-          <select class="form-control" id="occupation" class="occupation">
+          <select class="form-control" id="occupation" class="occupation" required>
             <option value="0">Select One</option>
             <option value="1">Bartender</option>
             <option value="2">Sales</option>
@@ -37,7 +35,7 @@
         </div>
         <div class="formSuggester">
           <label for="experience">How many years of experience you have in programming language?</label>
-          <input id="experience" class="form-control" type="text">
+          <input id="experience" class="form-control" type="text" required>
         </div>
         <div class="formSuggester">
           <label for="finance">Do you work for finance?</label>
