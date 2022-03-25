@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+  <link href="css/styles.css" rel="stylesheet" type="text/css" media="all">
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Programming Language Suggester</title>
+  <h1><em>Programming Language Suggester</em></h1>
+
+<body>
+  <form id="suggester">
+    <div class="formSuggester">
+      <label for="name">Enter Your Name</label>
+      <input id="name" class="form-control" type="text">
+    </div>
+    <div class="formSuggester">
+      <label for="age">Enter Your age</label>
+      <input id="age" class="form-control" type="text">
+    </div>
+    <div class="formSuggester">
+      <label for="ocupation">Enter Your ocupation</label>
+      <select class="form-control" id="ocupation">
+        <option value="1">Bartender</option>
+        <option value="2">Sales</option>
+        <option value="3">Cashier</option>
+        <option value="4">Software Engeener</option>
+        <option value="5">Nurse</option>
+        <option value="6">Marketing</option>
+      </select>
+    </div>
+    <div class="formSuggester">
+      <label for="experiense">How many years of experiense you have in programming language?</label>
+      <input id="experiense" class="form-control" type="text">
+    </div>
+    <div class="formSuggester">
+      <label for="finace">Do you work for finance?</label>
+      <div class="radio">
+        <label>
+          <input type="radio" name="answer" value="yes" checked>
+          Yes
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="answer" value="no">
+          No
+        </label>
+      </div>
+    </div>
+    <div>
+      <button type="submit" class="btn-grey" id="btnSubmit">Submit</button>
+    </div>
+  </form>
+
+  <div id="python">
+    Python
+  </div>
+  <div id="cs">
+    C#
+  </div>
+  <div id="brainfuck">
+    Brainfuck
+  </div>
+</body>
+
+</html>
