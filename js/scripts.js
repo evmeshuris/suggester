@@ -14,7 +14,7 @@ $(document).ready(function () {
     const age = parseInt($("#age").val());
     const occupation = parseInt($("#occupation").val());
     const experience = parseInt($("#experience").val());
-    const answer = $("input:radio[name=finace]:checked").val();
+    const finance = $("input:radio[name=finance]:checked").val();
 
     if (experience > 10 && occupation === 4) {
       showResult(name, 'Brainfuck');
@@ -22,7 +22,7 @@ $(document).ready(function () {
       showResult(name, 'Codding for Kids');
     } else if (occupation === 3 || occupation === 2 || occupation === 6) {
       showResult(name, 'C#');
-    } else if (finace === 'yes' && experience === 0) {
+    } else if (finance === 'yes' && experience === 0) {
       showResult(name, 'Python');
     } else if (experience === 0 && age > 21) {
       showResult(name, 'Epicodus');
