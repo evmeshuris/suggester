@@ -1,46 +1,77 @@
 $(document).ready(function () {
   $("form#suggester").submit(function (event) {
-    event.preventDefault();
+    //event.preventDefault();
     const startOverText = 'Start Over';
 
-    if ($("#btnSubmit").html() == startOverText){
+    if ($("#btnSubmit").html() == startOverText) {
       resetForm();
       return;
     }
 
+    $("form#suggester").validate();
+
     const name = $("#name").val();
     const age = parseInt($("#age").val());
-    const ocupation = parseInt($("#ocupation").val());
-    const experiense = parseInt($("#experiense").val());
+    const occupation = parseInt($("#occupation").val());
+    const experience = parseInt($("#experience").val());
     const answer = $("input:radio[name=answer]:checked").val();
 
-    // if (ocupation === 4) {
-    //   return alert("CS");
-    // }
-    // } else if (secondVal + thirdVal <= firstVal) {
-    //   return alert("NOT a triangle");
-    // } else if (firstVal + thirdVal <= secondVal) {
-    //   return alert("NOT a triangle");
-    // } 
-    if (experiense > 10 && ocupation === 4) {
+    if (experience > 10 && occupation === 4) {
       $('#brainfuck').show();
-    } else if (age < 18) {
-      $('#python').show();
-    } else if (ocupation === 3 || ocupation === 2) {
+    } else if (age > 5 && age < 10 && occupation === 0) {
+      $('#kids').show();
+    } else if (occupation === 3 || occupation === 2) {
       $('#cs').show();
-    } else if (answer === 'yes' && experiense === 0) {
+    } else if (answer === 'yes' && experience === 0) {
       $('#python').show();
+    } else if (experience === 0 && age > 21) {
+      $('#epicodus').show();
     }
 
     $("#btnSubmit").html(startOverText);
-    
+
   });
 });
 
-function resetForm(){
+function resetForm() {
+  $("#name").val('');
   $("#age").val('');
-  $('#python').hide();
+  $("#occupation").val('')
+  $("#experience").val('')
+  $("input:radio[name=answer]:checked").val('');
+  $("#python").hide();
+  $("#cs").hide();
+  $("#brainfuck").hide();
+  $("#kids").hide();
+  $("#epicodus").hide();
   $("#btnSubmit").html('Submit');
 }
-// const result = add(name, number2);
-//     $("#output").text(result);
+
+$(function() {
+  $("form#suggester").validate({
+    rules: {
+      name: "required",
+      age: "required",
+      occupation: "required",
+      experience: "required",
+      finace: "required",
+      age: {
+        required: true,
+        maxlength: 2
+      },
+      experience: {
+        required: /^[0-9]+$/,
+      }
+    },
+    messages: {
+      name: "Please enter your firstname",
+      age: {
+        required: "Please enter your age",
+        maxlength: "Don't you want to have a rest insted of learning programming language"
+      },
+    },
+    submitHandler: function(form) {
+      form.submit();
+    }
+  });
+});
