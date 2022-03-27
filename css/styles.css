@@ -3,7 +3,7 @@ body {
   background-color: aliceblue;
 }
 h1 {
-  color:#500215;
+  color: #500215;
   text-align: center;
 }
 #divResult {
@@ -19,10 +19,7 @@ button {
   cursor: pointer;
   border-radius: 4px;
 }
-#name, #age, #occupation, #experience, #finance {
-  background-color: rgb(255, 255, 226);
-}
-form. error {
+form .error {
   color: #ff0000;
 }
 form {
@@ -32,6 +29,7 @@ form {
   border-radius: 4px;
   width: 50%;
 }
-#spanResName, #spanResLang {
-  color:rgb(246, 255, 196);
+#spanResName,
+#spanResLang {
+  color: rgb(246, 255, 196);
 }
