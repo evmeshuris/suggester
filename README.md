@@ -23,7 +23,7 @@ _This is programming language suggester will give a resuat of what language you 
 
 ## Known Bugs
 
-* _Fields validation does not work properly_
+* _None known bugs_
 
 
 ## License
