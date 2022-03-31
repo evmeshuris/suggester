@@ -17,6 +17,10 @@ _This is programming language suggester will give a result of what language you 
 
 ## Setup/Installation Requirements
 
+* _Copy the repository URL named "suggester"_
+* _Clone the copied repository to your computer_
+* _Open the cloned directory named "suggester"_
+* _From the top of this directory, open index.html_
 * _Fill out the From_
 * _Click Submit to see the result_
 * _Click Start Over if you want to repeat a request_
